@@ -1,29 +1,122 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Mi primera web</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 50px;
-      background: #f4f4f4;
-    }
-    h1 {
-      color: #2c3e50;
-    }
-    img {
-      width: 300px;
-      border-radius: 12px;
-      margin-top: 20px;
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PUndCBooks</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>¡Hola, mundo! 🌍</h1>
-  <p>Esta es mi primera página publicada en GitHub Pages.</p>
-  <img src="https://picsum.photos/300" alt="Imagen de prueba">
+  <nav class="navbar">
+    <div class="navbar-left">
+      <img src="logo.png" alt="PUndCBooks Logo" class="logo" />
+      <span class="brand-name">PUndCBooks</span>
+    </div>
+    <ul class="navbar-menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    
+    <form class="navbar-search" role="search" aria-label="Site search">
+      <input type="search" placeholder="Search..." aria-label="Search books" />
+      <button type="submit">Search</button>
+    </form>
+    <button id="lang-toggle" aria-label="Toggle language" class="flag-btn">
+  <img src="https://flagcdn.com/us.svg" alt="English flag" />
+</button>
+    
+  </nav>
+
+  <header class="hero-section" role="banner" aria-label="Main banner with site slogan">
+    <div class="hero-text">
+      <h1>Books P &amp; C</h1>
+      <p>Learning languages was never so fun</p>
+    </div>
+
+  </header>
+  <!--  here the aclaration text-->
+    <section class="info-section" aria-label="About P&C Books">
+  <div class="info-text">
+    <h2>P&amp;C Books, Learn Having Fun</h2>
+    <p>
+      At P&amp;C Books, we believe that learning should be an exciting journey filled with creativity and joy. Our unique drawing books for children combine AI-generated artwork with engaging stories to spark imagination and foster a love for reading. Whether you choose from our exclusive collection or create your own personalized books, every page is designed to captivate and inspire. Dive into a world where education meets fun, and watch your child's creativity blossom. Join our community of young learners and explore endless possibilities with P&amp;C Books.
+    </p>
+  </div>
+  <div class="info-image">
+    <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80" alt="Children reading books" loading="lazy" />
+  </div>
+</section>
+<!-- finihs secion-->
+ <!-- sending emails-->
+<section class="upload-section" aria-label="Upload your image to create your own book">
+  <div class="upload-box">
+    <h2>Upload Your Image</h2>
+    <p>You can upload any image, and we will create a personalized drawing book for your child.</p>
+
+    <form id="upload-form" enctype="multipart/form-data">
+  <input type="file" id="image-upload" name="image" accept="image/*" required hidden />
+  <label for="image-upload" class="custom-file-btn">Select Image</label>
+  <div id="preview-container">
+    <img id="image-preview" src="" alt="Image preview" />
+  </div>
+  <button type="submit" class="btn-upload">Upload</button>
+</form>
+
+    <p id="upload-status" class="upload-status">Thank you! Your image has been submitted successfully.</p>
+  </div>
+</section>
+
+ <!-- finish sending email-->
+
+  <!-- two column galleryyy-->
+<section class="books-gallery" aria-label="Book gallery with two rows and three columns">
+  <div class="book-card">
+    <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=300&q=80" alt="Book 1" loading="lazy" />
+    <p class="book-description">Discover magical adventures in every page!</p>
+    <button type="button" class="btn-buy">Buy</button>
+  </div>
+  <div class="book-card">
+    <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=300&q=80" alt="Book 2" loading="lazy" />
+    <p class="book-description">Engaging stories for kids of all ages.</p>
+    <button type="button" class="btn-buy">Buy</button>
+  </div>
+  <div class="book-card">
+    <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=300&q=80" alt="Book 3" loading="lazy" />
+    <p class="book-description">Colorful drawings to spark your child’s creativity.</p>
+    <button type="button" class="btn-buy">Buy</button>
+  </div>
+  <div class="book-card">
+    <img src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?auto=format&fit=crop&w=300&q=80" alt="Book 4" loading="lazy" />
+    <p class="book-description">Interactive pages for fun learning.</p>
+    <button type="button" class="btn-buy">Buy</button>
+  </div>
+  <div class="book-card">
+    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=300&q=80" alt="Book 5" loading="lazy" />
+    <p class="book-description">Stories that teach values and friendship.</p>
+    <button type="button" class="btn-buy">Buy</button>
+  </div>
+  <div class="book-card">
+    <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=300&q=80" alt="Book 6" loading="lazy" />
+    <p class="book-description">Bright, fun illustrations to delight kids.</p>
+    <button type="button" class="btn-buy">Buy</button>
+  </div>
+</section>
+
+<!-- gallery-->
+
+  <section class="image-gallery" aria-label="Random image gallery">
+  <!-- Images inserted dynamically by app.js -->
+</section>
+
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer-placeholder">Footer Placeholder 1</div>
+    <div class="footer-placeholder">Footer Placeholder 2</div>
+    <div class="footer-placeholder">Footer Placeholder 3</div>
+    <div class="footer-placeholder">Footer Placeholder 4</div>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>
